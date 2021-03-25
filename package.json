@@ -1,0 +1,46 @@
+{
+  "name": "@tomieric/storybook-addon-vuep",
+  "version": "1.0.0",
+  "description": "A storybook addon for vue components with live editor and preview",
+  "main": "dist/preset.js",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "*.js"
+  ],
+  "keywords": [
+    "storybook",
+    "addons",
+    "vue",
+    "vuep"
+  ],
+  "author": "tomieric <tomieric@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.12",
+    "@babel/preset-react": "^7.12.13",
+    "@storybook/addon-actions": "^6.1.21",
+    "@storybook/addon-essentials": "^6.1.21",
+    "@storybook/addon-links": "^6.1.21",
+    "@storybook/vue": "^6.1.21",
+    "babel-loader": "^8.2.2",
+    "vue": "^2.6.12",
+    "vue-loader": "^15.7.0",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "dependencies": {
+    "codemirror": "^5.60.0",
+    "vuep": "^0.8.1",
+    "vuera": "^0.2.7"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006 --no-manager-cache",
+    "build-storybook": "build-storybook",
+    "build": "babel ./src --out-dir ./dist"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
