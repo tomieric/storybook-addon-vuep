@@ -8,7 +8,22 @@ export default {
     size: { control: { type: 'select', options: ['small', 'medium', 'large'] } },
   },
   parameters: {
-    codeEditor: `<template><div>code Editor</div></template>`
+    codeEditor: `
+    <template>
+    <div>
+      Hello, {{ name }}!
+      <my-button />
+    </div>
+  </template>
+
+  <script>
+    module.exports = {
+      data: function () {
+        return { name: 'Vue' }
+      }
+    }
+  </script>
+    `
   }
 };
 

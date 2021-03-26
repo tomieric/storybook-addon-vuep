@@ -26,6 +26,7 @@
     "@storybook/addon-links": "^6.1.21",
     "@storybook/vue": "^6.1.21",
     "babel-loader": "^8.2.2",
+    "cp-cli": "^2.0.0",
     "vue": "^2.6.12",
     "vue-loader": "^15.7.0",
     "vue-template-compiler": "^2.6.12"
@@ -38,7 +39,7 @@
   "scripts": {
     "storybook": "start-storybook -p 6006 --no-manager-cache",
     "build-storybook": "build-storybook",
-    "build": "babel ./src --out-dir ./dist"
+    "build": "babel ./src --out-dir ./dist && cp-cli ./src/style.css ./dist"
   },
   "publishConfig": {
     "access": "public"
